@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+   selector: 'app-root',
+   template: `
+    <app-book></app-book>
+    <br/><br/>
+    <a [routerLink]="['/my-book', 1]">My Favourite Book</a>
+    <router-outlet></router-outlet>
+   `
 })
 export class AppComponent {
-  title = 'switchMapEstudos';
 }
